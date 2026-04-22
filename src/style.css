@@ -82,20 +82,18 @@ header::before {
 }
 .project-showcase {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
 .project-card {
     display: grid;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 3fr 1fr;
     padding: 1rem;
     gap: 1rem;
-    border: 1px solid;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 .project-cover {
-    align-content: center;
-    background-color: aliceblue;
-    height: 100%;
+    display: grid;
     place-items: center;
 }
 
@@ -107,9 +105,11 @@ header::before {
     grid-template-areas:
         'title link'
         'desc desc';
+    margin-bottom: 2rem;
 }
 .project-title {
     grid-area: title;
+    font-weight: 600;
 }
 
 .project-links {
@@ -118,5 +118,29 @@ header::before {
 
 .project-desc {
     grid-area: desc;
+}
 
+.project-card:nth-child(1) .project-cover {
+    background-color: #ff6b6b;
+}
+.project-card:nth-child(2) .project-cover {
+    background-color: #4ecdc4;
+}
+.project-card:nth-child(3) .project-cover {
+    background-color: #ffe66d;
+}
+.project-card:nth-child(4) .project-cover {
+    background-color: #1a535c;
+}
+.project-card:nth-child(5) .project-cover {
+    background-color: #f7fff7;
+}
+.project-card:nth-child(6) .project-cover {
+    background-color: #ff9f1c;
+}
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
 }
