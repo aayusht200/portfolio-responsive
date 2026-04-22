@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: system-ui;
+    text-wrap: auto;
 }
 
 body {
@@ -41,8 +42,11 @@ body {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 .link-logo {
-    max-height: 16px;
-    max-width: 16px;
+    width: clamp(20px, 1vw, 28px);
+    height: clamp(20px, 1vw, 28px);
+}
+a {
+    text-decoration: none;
 }
 .about {
     background-color: white;
@@ -70,4 +74,49 @@ header::before {
     transform: skewY(-9deg);
     transform-origin: bottom left;
     z-index: -1;
+}
+.links-div {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+.project-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+.project-card {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    padding: 1rem;
+    gap: 1rem;
+    border: 1px solid;
+}
+.project-cover {
+    align-content: center;
+    background-color: aliceblue;
+    height: 100%;
+    place-items: center;
+}
+
+.project-info {
+    display: grid;
+    width: 100%;
+    gap: 1rem;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        'title link'
+        'desc desc';
+}
+.project-title {
+    grid-area: title;
+}
+
+.project-links {
+    grid-area: link;
+}
+
+.project-desc {
+    grid-area: desc;
+
 }
