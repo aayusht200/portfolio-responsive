@@ -1,106 +1,97 @@
-# ⚙️ Webpack + Biome + Jest Template
+# Responsive Portfolio
 
-A modern, reusable **frontend starter template** for JavaScript projects using **Webpack 5**, **Biome**, **Jest**, and **Babel**.
+A personal portfolio site built with plain HTML, CSS, and JavaScript, bundled with Webpack.
 
-Built for fast project setup, clean code standards, test-driven development, and GitHub Pages deployment.
+The current project focuses on a responsive landing page with:
 
----
+- an intro / about section
+- social profile links
+- a project showcase grid
+- a contact section
+- tablet and mobile layout adjustments
 
-## 🧱 Folder Structure
+## Tech Stack
+
+- JavaScript
+- HTML
+- CSS
+- Webpack 5
+- Babel
+- Biome
+- Jest
+
+## Project Structure
 
 ```txt
-project/
+portfolio-responsive/
+├── assets/
+│   └── headshot.png
 ├── src/
 │   ├── index.js
 │   ├── style.css
 │   └── template.html
-├── dist/
-├── tests/
+├── babel.config.cjs
+├── biome.json
+├── package.json
 ├── webpack.dev.js
 ├── webpack.prod.js
-├── babel.config.cjs
-├── package.json
-├── biome.json
-└── .gitignore
+└── readme.md
 ```
 
----
+## Getting Started
 
-## ⚙️ Setup Instructions
+Install dependencies:
 
-### 1️⃣ Initialize Project
 ```bash
-npm run setup
+npm install
 ```
 
-### 2️⃣ Start Development Server
+Start the development server:
+
 ```bash
 npm start
 ```
 
-### 3️⃣ Build for Production
+Create a production build:
+
 ```bash
 npm run build
 ```
 
-### 4️⃣ Lint & Format Code
-```bash
-npm run lint-format
-```
+## Available Scripts
 
-Optional:
-```bash
-npm run lint
-npm run format
-```
+- `npm start` runs the webpack dev server
+- `npm run build` creates the production bundle in `dist/`
+- `npm run lint` checks the codebase with Biome
+- `npm run format` applies Biome fixes
+- `npm run lint-format` runs Biome with write mode
+- `npm run test` runs Jest
+- `npm run test:watch` runs Jest in watch mode
 
-### 5️⃣ Run Tests
-```bash
-npm run test
-npm run test:watch
-```
+## Current Implementation Notes
 
----
+- The app entry point is `src/index.js`
+- The page markup lives in `src/template.html`
+- Styling and responsive breakpoints live in `src/style.css`
+- Image assets are handled by Webpack asset modules
+- The site currently uses a local headshot image plus CDN-hosted social icons
 
-## 🚀 GitHub Pages Deployment
+## Deployment
 
-### Deploy
+This repo includes GitHub Pages helper scripts:
+
 ```bash
 npm run deploy
-```
-
-### Reset Deployment Branch
-```bash
 npm run reset
 ```
 
----
+These scripts assume a `main` branch and a `gh-pages` deployment flow.
 
-## 🧩 Tech Stack
+## Next Content Updates
 
-- Webpack 5
-- Biome
-- Jest
-- Babel
-- HTML Webpack Plugin
-- CSS + Style Loaders
-- ES Modules
+The portfolio structure is in place, but some content is still placeholder content. Good next updates would be:
 
----
-
-## 🗂️ .gitignore
-
-```txt
-node_modules/
-dist/
-.DS_Store
-._*
-```
-
----
-
-## 🧰 Notes
-
-- supports development + production
-- test-ready from day one
-- deploy workflow automated
+- replace the lorem ipsum bio and project descriptions
+- add real project names and live links
+- update the contact details in the footer
+- add tests if interactive JavaScript is introduced later
